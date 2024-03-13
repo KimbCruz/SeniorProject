@@ -26,7 +26,6 @@ public class VacuumCollector : MonoBehaviour
 
     {
         //Set a custom position for the vacuum
-        Vector3 customPosition = new Vector3(-7f, 38f, -43f);
         transform.position = new Vector3(-7f, 38f, -43f);
 
         vacuumCollected = true;
