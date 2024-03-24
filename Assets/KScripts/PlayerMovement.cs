@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);   // Adjust the multiplier for different rotation speed
 
         newVelocity = Vector3.up * rb.velocity.y;
+        if (RubbishManager.rubbishCount >= 5)
+            runSpeed = 100;
         float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
         newVelocity.x = Input.GetAxis("Horizontal") * speed;
         newVelocity.z = Input.GetAxis("Vertical") * speed;
