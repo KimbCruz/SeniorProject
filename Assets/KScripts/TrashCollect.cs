@@ -29,8 +29,8 @@ public class TrashCollect : MonoBehaviour
         if (VacuumCleaner.GetComponent<VacuumCollector>().vacuumCollected)
         {
 
-            //Set a custom position for the trash
-            transform.position = new Vector3(-9f, 38f, -43f);
+            //Move the trash out of the Player's view
+            transform.position = new Vector3(-42f, 38f, -1f);
             AddTrashScore();
         }
         

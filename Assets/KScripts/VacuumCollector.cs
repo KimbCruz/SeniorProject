@@ -25,8 +25,8 @@ public class VacuumCollector : MonoBehaviour
     void OnMouseDown()
 
     {
-        //Set a custom position for the vacuum
-        transform.position = new Vector3(-7f, 38f, -43f);
+        //Move the vacuum out of the Player's view
+        transform.position = new Vector3(-42f, 38f, -1f);
 
         vacuumCollected = true;
 
