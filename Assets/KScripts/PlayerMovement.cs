@@ -45,7 +45,11 @@ public class PlayerMovement : MonoBehaviour
 
         newVelocity = Vector3.up * rb.velocity.y;
         if (RubbishManager.rubbishCount >= 5)
+        {
             runSpeed = 100;
+            jumpSpeed = 40;
+        }
+            
         float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
         newVelocity.x = Input.GetAxis("Horizontal") * speed;
         newVelocity.z = Input.GetAxis("Vertical") * speed;
