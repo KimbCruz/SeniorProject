@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //Add AI that will follow the Player
-using Unity.AI;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
@@ -16,7 +15,7 @@ public class FollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        migo = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -24,7 +23,8 @@ public class FollowPlayer : MonoBehaviour
     {
         if (RubbishManager.rubbishCount >= 5 &&  canvasGroup.alpha == 0)
         {
-            migo.SetDestination(janitor.position);
+            migo.destination = janitor.position;
+            //migo.SetDestination(janitor.position);
         }
             
     }
