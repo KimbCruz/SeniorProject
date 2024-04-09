@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //  Hide and lock the mouse cursor
-        Cursor.visible = false;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         if (RubbishManager.rubbishCount >= 5)
         {
             runSpeed = 100;
-            jumpSpeed = 40;
+            jumpSpeed = 15;
         }
             
         float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
@@ -121,5 +121,13 @@ public class PlayerMovement : MonoBehaviour
             angle = angleMin;
 
         return angle;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "enemy")
+        {
+            //GameOver();
+        }
     }
 }
