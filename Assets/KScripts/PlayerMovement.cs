@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //  Hide and lock the mouse cursor
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
 

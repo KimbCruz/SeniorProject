@@ -9,5 +9,6 @@ public class Main : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene("MazeChase");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
