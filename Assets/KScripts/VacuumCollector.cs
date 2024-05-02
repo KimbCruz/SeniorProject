@@ -7,9 +7,12 @@ public class VacuumCollector : MonoBehaviour
 
     //Check if vacuum is collected first
     public bool vacuumCollected = false;
+
     public GameObject VacuumCleaner;
+
     //UI Canvas telling the player to collect the vacuum
     public CanvasGroup canvasGroup;
+
     // Start is called before the first frame update
     void Start()
     {

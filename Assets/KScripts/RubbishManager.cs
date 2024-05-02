@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RubbishManager : MonoBehaviour
 {
+
     //Trash counter
     public static int rubbishCount = 0;
     

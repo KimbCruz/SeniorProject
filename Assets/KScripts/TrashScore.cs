@@ -5,39 +5,53 @@ using UnityEngine.UI;
 
 public class TrashScore : MonoBehaviour
 {
+
+    //amount of rubbish displaying on screen
     public Text rubbishText;
-    //UI Canvas telling the player to escape
     
+    //How long the canvas is to appaer on screen
     public float displayTime = 5f;
+
+    //UI object
     public CanvasGroup canvasGroup;
+
     private bool alreadyDisplayedImage = false;
     
     // Start is called before the first frame update
     public void Start()
     {
+
         rubbishText = GetComponent<Text>();
+
         rubbishText.enabled = true;
+
     }
 
     // Update is called once per frame
     public void Update()
     {
+
         //Display score
         rubbishText.text = "Trash: " + RubbishManager.rubbishCount.ToString() + " / 5";
         
         //Hide score when it reaches maximum trash
         if (RubbishManager.rubbishCount >= 5 && !alreadyDisplayedImage)
         {
+
             rubbishText.enabled = false;
+
             //Start warning pop up timer
             StartCoroutine(DisplayImageForSeconds());
+
             alreadyDisplayedImage = true;
+
         }
         
     }
 
     private IEnumerator DisplayImageForSeconds()
     {
+
         //Reveal warning the canvasGroup
         canvasGroup.alpha = 1;
 
