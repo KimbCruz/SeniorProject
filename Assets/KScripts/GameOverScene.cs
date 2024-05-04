@@ -7,6 +7,27 @@ using UnityEngine.UI;
 public class GameOverScene : MonoBehaviour
 {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //public GameOverScene gameOver;
     
     // Start is called before the first frame update
@@ -15,11 +36,70 @@ public class GameOverScene : MonoBehaviour
         
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Update is called once per frame
     void Update()
     {
         
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("enemy"))
